@@ -104,12 +104,14 @@ INSERT INTO SUPPLIES (VENDOR_ID, PRODUCT_ID, STOCK_QUANTITY) VALUES
     ('V102', 'P004', 80),
     ('V103', 'P003', 1200),
     ('V104', 'P004', 150);
+
 3. Environment Variables: Create a .env file in the root directory:  Code snippetDB_USER=postgres
 DB_HOST=localhost
 DB_NAME=ecommerce_db
 DB_PASSWORD=your_postgres_password
 DB_PORT=5432
 PORT=3000
+
 4. Installation & Running
 Bash
 # Install dependencies
@@ -167,3 +169,8 @@ JSON
   "stock_quantity": 450
 }
 Expected Status: 200 OK
+
+# Security & Error Handling
+SQL Injection Prevention: Uses parameterized variables ($1, $2) across all queries.
+
+Error Handling: Implements try/catch blocks in all route controllers, responding with proper HTTP status codes (400 Bad Request, 404 Not Found, 500 Internal Server Error).
