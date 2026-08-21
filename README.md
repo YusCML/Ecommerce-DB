@@ -5,8 +5,8 @@ This project implements a Node.js/TypeScript backend API using Express and the n
 ## Prerequisites
 * PostgreSQL installed and running locally.
 * Node.js and npm installed.
- 1. PrerequisitesNode.js installed locally.PostgreSQL server running locally.  
- 2. Database SetupRun the following SQL DDL and DML scripts in your local PostgreSQL database (e.g., ecommerce_db):  SQL-- DDL: CREATE TABLES & CONSTRAINTS
+ 1. Prerequisites: Node.js installed locally.PostgreSQL server running locally.  
+ 2. Database Setup: Run the following SQL DDL and DML scripts in your local PostgreSQL database (e.g., ecommerce_db):  SQL-- DDL: CREATE TABLES & CONSTRAINTS
 
 CREATE TABLE CUSTOMER (
     CUSTOMER_ID VARCHAR(10),
@@ -104,13 +104,15 @@ INSERT INTO SUPPLIES (VENDOR_ID, PRODUCT_ID, STOCK_QUANTITY) VALUES
     ('V102', 'P004', 80),
     ('V103', 'P003', 1200),
     ('V104', 'P004', 150);
-3. Environment VariablesCreate a .env file in the root directory:  Code snippetDB_USER=postgres
+3. Environment Variables: Create a .env file in the root directory:  Code snippetDB_USER=postgres
 DB_HOST=localhost
 DB_NAME=ecommerce_db
 DB_PASSWORD=your_postgres_password
 DB_PORT=5432
 PORT=3000
-4. Installation & RunningBash# Install dependencies
+4. Installation & Running
+Bash
+# Install dependencies
 npm install
 
 # Run in development mode with live reload
