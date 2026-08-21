@@ -115,3 +115,53 @@ npm install
 
 # Run in development mode with live reload
 npm run dev
+
+# Testing with Thunder Client
+Install Extension: Open VS Code, go to the Extensions tab (Ctrl+Shift+X), search for Thunder Client, and install it.
+
+Start the Server: Ensure your API server is running with npm run dev.
+
+Execute Requests: Click on the Thunder Client icon (lightning bolt) in the VS Code sidebar and create a New Request:
+
+GET Customers
+
+Method: GET
+
+URL: http://localhost:3000/api/v1/customers
+
+Expected Status: 200 OK
+
+POST Customer
+
+Method: POST
+
+URL: http://localhost:3000/api/v1/customers
+
+Headers: Content-Type: application/json
+
+Body (JSON):
+
+JSON
+{
+  "customer_id": "C106",
+  "customer_name": "Frank Miller",
+  "city": "Austin",
+  "membership_level": "Silver"
+}
+Expected Status: 201 Created
+
+PUT Update Stock
+
+Method: PUT
+
+URL: http://localhost:3000/api/v1/supplies/V101/P001
+
+Headers: Content-Type: application/json
+
+Body (JSON):
+
+JSON
+{
+  "stock_quantity": 450
+}
+Expected Status: 200 OK
